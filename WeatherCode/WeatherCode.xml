@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="WeatherCode.xsl"?>
+<weather>
+    <weatherdata>
+        <code>0</code>
+        <data>晴天</data>
+    </weatherdata>
+    <weatherdata>
+        <code>1</code>
+        <data>晴れ時々曇り</data>
+    </weatherdata>
+    <weatherdata>
+        <code>2</code>
+        <data>晴れ時々曇り</data>
+    </weatherdata>
+    <weatherdata>
+        <code>3</code>
+        <data>曇り</data>
+    </weatherdata>
+    <weatherdata>
+        <code>45</code>
+        <data>霧と降る霧氷</data>
+    </weatherdata>
+    <weatherdata>
+        <code>48</code>
+        <data>霧と降る霧氷</data>
+    </weatherdata>
+    <weatherdata>
+        <code>51</code>
+        <data>霧雨: 軽い</data>
+    </weatherdata>
+    <weatherdata>
+        <code>53</code>
+        <data>霧雨: 中程度</data>
+    </weatherdata>
+    <weatherdata>
+        <code>55</code>
+        <data>霧雨: そして濃い強度</data>
+    </weatherdata>
+    <weatherdata>
+        <code>56</code>
+        <data>氷結霧雨: 軽くて濃い強度</data>
+    </weatherdata>
+    <weatherdata>
+        <code>57</code>
+        <data>氷結霧雨: 軽くて濃い強度</data>
+    </weatherdata>
+    <weatherdata>
+        <code>61</code>
+        <data>雨：小雨</data>
+    </weatherdata>
+    <weatherdata>
+        <code>63</code>
+        <data>雨：中程度</data>
+    </weatherdata>
+    <weatherdata>
+        <code>65</code>
+        <data>雨：激しい雨</data>
+    </weatherdata>
+    <weatherdata>
+        <code>66</code>
+        <data>凍てつく雨：軽くて激しい雨</data>
+    </weatherdata>
+    <weatherdata>
+        <code>67</code>
+        <data>凍てつく雨：軽くて激しい雨</data>
+    </weatherdata>
+    <weatherdata>
+        <code>71</code>
+        <data>降雪量: わずか</data>
+    </weatherdata>
+    <weatherdata>
+        <code>73</code>
+        <data>降雪量: 中程度</data>
+    </weatherdata>
+    <weatherdata>
+        <code>75</code>
+        <data>降雪量: 激しい</data>
+    </weatherdata>
+    <weatherdata>
+        <code>77</code>
+        <data>雪の粒</data>
+    </weatherdata>
+    <weatherdata>
+        <code>80</code>
+        <data>にわか雨：小雨</data>
+    </weatherdata>
+    <weatherdata>
+        <code>81</code>
+        <data>にわか雨：中程度</data>
+    </weatherdata>
+    <weatherdata>
+        <code>82</code>
+        <data>にわか雨：激しい雨</data>
+    </weatherdata>
+    <weatherdata>
+        <code>85</code>
+        <data>雪が少し降ったり、激しく降ったりします</data>
+    </weatherdata>
+    <weatherdata>
+        <code>86</code>
+        <data>雪が少し降ったり、激しく降ったりします</data>
+    </weatherdata>
+    <weatherdata>
+        <code>95</code>
+        <data>雷雨: わずかまたは中程度(雹を伴う雷雨予報は中央ヨーロッパ)</data>
+    </weatherdata>
+    <weatherdata>
+        <code>96</code>
+        <data>わずかまたは激しいひょうを伴う雷雨</data>
+    </weatherdata>
+    <weatherdata>
+        <code>99</code>
+        <data>わずかまたは激しいひょうを伴う雷雨(雹を伴う雷雨予報は中央ヨーロッパ)</data>
+    </weatherdata>
+</weather>
