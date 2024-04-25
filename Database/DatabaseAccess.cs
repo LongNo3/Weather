@@ -29,7 +29,7 @@ namespace Weather.Database
             {
                 connection.ConnectionString = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = ../../../Database/MainDB.accdb";
                 connection.Open();
-                string sql = "SELECT EXPLANATION FROM WEATHER_CODE WHERE CODE = @CODE";
+                string sql = "SELECT EXPLANATION, ICON_FILE1, ICON_FILE2 FROM M_WEATHER_DATA WHERE CODE = @CODE";
                 command.CommandText = sql;
                 command.Connection = connection;
 
@@ -43,7 +43,7 @@ namespace Weather.Database
                 dataAdapter.Fill(dataTable);
 
                 DataRow dr = dataTable.Rows[0];
-                value = (string)dr.ItemArray[0];
+                value = (string)dr.ItemArray[0] + "," + (string)dr.ItemArray[1] + "," + (string)dr.ItemArray[2];
 
             } catch (Exception ex) {
                 value = ex.Message.ToString();

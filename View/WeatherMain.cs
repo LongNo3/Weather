@@ -14,6 +14,9 @@ using System.Text.Json;
 using System.Text.Unicode;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Reflection.Emit;
 
 namespace Weather
 {
@@ -28,6 +31,13 @@ namespace Weather
         public WeatherMain()
         {
             InitializeComponent();
+
+            //lblCurrentWeathrの親コントロールをpbShitaとする
+            this.pbShita.Controls.Add(this.lblCurrentWeathr);
+
+            //lblCurrentWeathrの位置をpbShita内の位置に変更する
+            this.lblCurrentWeathr.Top = 160;
+            this.lblCurrentWeathr.Left = this.lblCurrentWeathr.Left - this.pbShita.Left;
         }
 
         /// <summary>
@@ -70,8 +80,25 @@ namespace Weather
                 RawWeatherDataDto rawWeatherDataDto = JsonDataChange.JsonDataInClass(weatherDataObject);
 
                 DatabaseAccess dba = new DatabaseAccess();
-                this.lblCurrentWeathr.Text = dba.GetValue(rawWeatherDataDto.CurrentDto.WeatherCode);
+                string? value = dba.GetValue(rawWeatherDataDto.CurrentDto.WeatherCode);
+                string[] values = value.Split(",");
+                this.lblCurrentWeathr.Text = values[0];
                 this.lblCurrentTemperature.Text = rawWeatherDataDto.CurrentDto.Temperature2m + rawWeatherDataDto.CurrentUnitsDto.Temperature2mUnit;
+
+                // 表示アイコン
+                Bitmap img1 = new Bitmap("../../../Picture/" + values[1]);
+                Bitmap img2 = new Bitmap("../../../Picture/" + values[2]);
+                img1.MakeTransparent(img1.GetPixel(0, 0));
+                img2.MakeTransparent(img2.GetPixel(0, 0));
+
+                // アイコン合成
+                Graphics g = Graphics.FromImage(img1);
+                g.DrawImage(img2, 0, 0, img2.Width, img2.Height);
+                g.Dispose();
+                img2.Dispose();
+
+                // アイコン表示
+                this.pbShita.Image = img1;
             }
             catch (Exception ex)
             {

@@ -34,10 +34,8 @@
             lblCurrentTemperature = new Label();
             lblCurrentTemperatureMin = new Label();
             lblErrer = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
-            pboxMain = new PictureBox();
-            tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pboxMain).BeginInit();
+            pbShita = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pbShita).BeginInit();
             SuspendLayout();
             // 
             // lblToday
@@ -53,8 +51,9 @@
             // lblCurrentWeathr
             // 
             lblCurrentWeathr.AutoSize = true;
+            lblCurrentWeathr.FlatStyle = FlatStyle.Flat;
             lblCurrentWeathr.Font = new Font("メイリオ", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 128);
-            lblCurrentWeathr.Location = new Point(58, 182);
+            lblCurrentWeathr.Location = new Point(53, 202);
             lblCurrentWeathr.Name = "lblCurrentWeathr";
             lblCurrentWeathr.Size = new Size(126, 41);
             lblCurrentWeathr.TabIndex = 2;
@@ -96,27 +95,14 @@
             lblErrer.TabIndex = 6;
             lblErrer.Text = "label3";
             // 
-            // tableLayoutPanel1
+            // pbShita
             // 
-            tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(pboxMain, 0, 0);
-            tableLayoutPanel1.Location = new Point(19, 41);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(226, 202);
-            tableLayoutPanel1.TabIndex = 7;
-            // 
-            // pboxMain
-            // 
-            pboxMain.Dock = DockStyle.Fill;
-            pboxMain.Location = new Point(3, 3);
-            pboxMain.Name = "pboxMain";
-            pboxMain.Size = new Size(220, 196);
-            pboxMain.SizeMode = PictureBoxSizeMode.CenterImage;
-            pboxMain.TabIndex = 0;
-            pboxMain.TabStop = false;
+            pbShita.InitialImage = null;
+            pbShita.Location = new Point(18, 43);
+            pbShita.Name = "pbShita";
+            pbShita.Size = new Size(200, 200);
+            pbShita.TabIndex = 7;
+            pbShita.TabStop = false;
             // 
             // WeatherMain
             // 
@@ -129,12 +115,11 @@
             Controls.Add(lblCurrentTemperatureMax);
             Controls.Add(lblCurrentWeathr);
             Controls.Add(lblToday);
-            Controls.Add(tableLayoutPanel1);
+            Controls.Add(pbShita);
             Name = "WeatherMain";
             Text = "天気";
             Load += WeatherMainLoad;
-            tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pboxMain).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbShita).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -147,7 +132,6 @@
         private Label lblCurrentTemperature;
         private Label lblCurrentTemperatureMin;
         private Label lblErrer;
-        private TableLayoutPanel tableLayoutPanel1;
-        private PictureBox pboxMain;
+        private PictureBox pbShita;
     }
 }
