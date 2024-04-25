@@ -31,13 +31,6 @@ namespace Weather
         public WeatherMain()
         {
             InitializeComponent();
-
-            //lblCurrentWeathrの親コントロールをpbShitaとする
-            this.pbShita.Controls.Add(this.lblCurrentWeathr);
-
-            //lblCurrentWeathrの位置をpbShita内の位置に変更する
-            this.lblCurrentWeathr.Top = 160;
-            this.lblCurrentWeathr.Left = this.lblCurrentWeathr.Left - this.pbShita.Left;
         }
 
         /// <summary>

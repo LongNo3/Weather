@@ -53,36 +53,40 @@
             lblCurrentWeathr.AutoSize = true;
             lblCurrentWeathr.FlatStyle = FlatStyle.Flat;
             lblCurrentWeathr.Font = new Font("メイリオ", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 128);
-            lblCurrentWeathr.Location = new Point(53, 202);
+            lblCurrentWeathr.Location = new Point(51, 246);
             lblCurrentWeathr.Name = "lblCurrentWeathr";
             lblCurrentWeathr.Size = new Size(126, 41);
             lblCurrentWeathr.TabIndex = 2;
             lblCurrentWeathr.Text = "天気表示";
+            lblCurrentWeathr.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblCurrentTemperatureMax
             // 
             lblCurrentTemperatureMax.AutoSize = true;
-            lblCurrentTemperatureMax.Location = new Point(18, 246);
+            lblCurrentTemperatureMax.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold);
+            lblCurrentTemperatureMax.Location = new Point(17, 287);
             lblCurrentTemperatureMax.Name = "lblCurrentTemperatureMax";
-            lblCurrentTemperatureMax.Size = new Size(38, 15);
+            lblCurrentTemperatureMax.Size = new Size(51, 21);
             lblCurrentTemperatureMax.TabIndex = 3;
             lblCurrentTemperatureMax.Text = "label1";
             // 
             // lblCurrentTemperature
             // 
             lblCurrentTemperature.AutoSize = true;
-            lblCurrentTemperature.Location = new Point(94, 246);
+            lblCurrentTemperature.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold);
+            lblCurrentTemperature.Location = new Point(94, 287);
             lblCurrentTemperature.Name = "lblCurrentTemperature";
-            lblCurrentTemperature.Size = new Size(38, 15);
+            lblCurrentTemperature.Size = new Size(54, 21);
             lblCurrentTemperature.TabIndex = 4;
             lblCurrentTemperature.Text = "label2";
             // 
             // lblCurrentTemperatureMin
             // 
             lblCurrentTemperatureMin.AutoSize = true;
-            lblCurrentTemperatureMin.Location = new Point(170, 246);
+            lblCurrentTemperatureMin.Font = new Font("Yu Gothic UI Semibold", 12F, FontStyle.Bold);
+            lblCurrentTemperatureMin.Location = new Point(168, 287);
             lblCurrentTemperatureMin.Name = "lblCurrentTemperatureMin";
-            lblCurrentTemperatureMin.Size = new Size(38, 15);
+            lblCurrentTemperatureMin.Size = new Size(54, 21);
             lblCurrentTemperatureMin.TabIndex = 5;
             lblCurrentTemperatureMin.Text = "label3";
             // 
