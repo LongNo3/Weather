@@ -13,18 +13,18 @@ namespace Weather.Data
         /// 日時
         /// </summary>
         [JsonProperty("time")]
-        public String DateTime { get; set; } = string.Empty;
+        public IList<String>? DateTime { get; set; }
 
         /// <summary>
         /// 2m以下の温度
         /// </summary>
         [JsonProperty("temperature_2m")]
-        public String Temperature2m { get; set; } = string.Empty;
+        public IList<String>? Temperature2m { get; set; }
 
         /// <summary>
         /// 最大降水確率
         /// </summary>
         [JsonProperty("precipitation_probability")]
-        public String PrecipitationQrobability { get; set; } = string.Empty;
+        public IList<String>? PrecipitationQrobability { get; set; }
     }
 }

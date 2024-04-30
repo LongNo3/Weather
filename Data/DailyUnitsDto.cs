@@ -13,42 +13,42 @@ namespace Weather.Data
         /// 日付ISOコード
         /// </summary>
         [JsonProperty("time")]
-        public String DateCode { get; set; } = string.Empty;
+        public IList<String>? DateCode { get; set; }
 
         /// <summary>
         /// 天気コードWMO
         /// </summary>
         [JsonProperty("weather_code")]
-        public String WeatherCodeWmo { get; set; } = string.Empty;
+        public IList<String>? WeatherCodeWmo { get; set; }
 
         /// <summary>
         /// 2m以下の最高温度単位
         /// </summary>
         [JsonProperty("temperature_2m_max")]
-        public String Temperature2mMaxUnit { get; set; } = string.Empty;
+        public IList<String>? Temperature2mMaxUnit { get; set; }
 
         /// <summary>
         /// 2m以下の最低温度単位
         /// </summary>
         [JsonProperty("temperature_2m_min")]
-        public String Temperature2mMinUnit { get; set; } = string.Empty;
+        public IList<String>? Temperature2mMinUnit { get; set; }
 
         /// <summary>
         /// 見かけの最高温度単位
         /// </summary>
         [JsonProperty("apparent_temperature_max")]
-        public String ApparentTemperatureMaxUnit { get; set; } = string.Empty;
+        public IList<String>? ApparentTemperatureMaxUnit { get; set; }
 
         /// <summary>
         /// 見かけの最高温度単位
         /// </summary>
         [JsonProperty("apparent_temperature_min")]
-        public String ApparentTemperatureMinUnit { get; set; } = string.Empty;
+        public IList<String>? ApparentTemperatureMinUnit { get; set; }
 
         /// <summary>
         /// 最大降水確率単位
         /// </summary>
         [JsonProperty("precipitation_probability_max")]
-        public String PrecipitationProbabilityMaxUnit { get; set; } = string.Empty;
+        public IList<String>? PrecipitationProbabilityMaxUnit { get; set; }
     }
 }
