@@ -76,7 +76,12 @@ namespace Weather
                 string? value = dba.GetValue(rawWeatherDataDto.CurrentDto.WeatherCode);
                 string[] values = value.Split(",");
                 this.lblCurrentWeathr.Text = values[0];
+                // 今の温度を表示
                 this.lblCurrentTemperature.Text = rawWeatherDataDto.CurrentDto.Temperature2m + rawWeatherDataDto.CurrentUnitsDto.Temperature2mUnit;
+                // 今日の最高気温を表示
+                this.lblCurrentTemperatureMax.Text = rawWeatherDataDto.DailyDto.Temperature2mMax?[0] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit?[0];
+                // 今日の最低気温を表示
+                this.lblCurrentTemperatureMin.Text = rawWeatherDataDto.DailyDto.Temperature2mMin?[0] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit?[0];
 
                 // 表示アイコン
                 Bitmap img1 = new Bitmap("../../../Picture/" + values[1]);
