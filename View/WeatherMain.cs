@@ -107,15 +107,69 @@ namespace Weather
                     // 今日の最低気温を表示
                     this.lblCurrentTemperatureMin.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[0] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit[0];
 
-                    // 週間天気
+                    // 週間天気1
                     string nextWeathrData = string.Empty;
                     this.lblNextDay1.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[1]).ToString(DAY_FORMAT);
                     nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[1]);
-                    string[] nextWeathrDatas = currentWeathrData.Split(",");
+                    string[] nextWeathrDatas = nextWeathrData.Split(",");
                     this.lblNextWeathr1.Text = nextWeathrDatas[0];
                     this.pbNextWeathr1.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
+                    this.lblNextTemperatureMax1.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[1];
+                    this.lblNextTemperatureMin1.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[1];
+
+                    // 週間天気2
+                    this.lblNextDay2.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[2]).ToString(DAY_FORMAT);
+                    nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[2]);
+                    nextWeathrDatas = nextWeathrData.Split(",");
+                    this.lblNextWeathr2.Text = nextWeathrDatas[0];
+                    this.pbNextWeathr2.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
+                    this.lblNextTemperatureMax2.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[2];
+                    this.lblNextTemperatureMin2.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[2];
+
+                    // 週間天気3
+                    this.lblNextDay3.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[3]).ToString(DAY_FORMAT);
+                    nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[3]);
+                    nextWeathrDatas = nextWeathrData.Split(",");
+                    this.lblNextWeathr3.Text = nextWeathrDatas[0];
+                    this.pbNextWeathr3.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
+                    this.lblNextTemperatureMax3.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[3];
+                    this.lblNextTemperatureMin3.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[3];
+
+                    // 週間天気4
+                    this.lblNextDay4.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[4]).ToString(DAY_FORMAT);
+                    nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[4]);
+                    nextWeathrDatas = nextWeathrData.Split(",");
+                    this.lblNextWeathr4.Text = nextWeathrDatas[0];
+                    this.pbNextWeathr4.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
+                    this.lblNextTemperatureMax4.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[4];
+                    this.lblNextTemperatureMin4.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[4];
+
+                    // 週間天気5
+                    this.lblNextDay5.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[5]).ToString(DAY_FORMAT);
+                    nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[5]);
+                    nextWeathrDatas = nextWeathrData.Split(",");
+                    this.lblNextWeathr5.Text = nextWeathrDatas[0];
+                    this.pbNextWeathr5.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
+                    this.lblNextTemperatureMax5.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[5];
+                    this.lblNextTemperatureMin5.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[5];
+
+                    // 週間天気6
+                    this.lblNextDay6.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[6]).ToString(DAY_FORMAT);
+                    nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[6]);
+                    nextWeathrDatas = nextWeathrData.Split(",");
+                    this.lblNextWeathr6.Text = nextWeathrDatas[0];
+                    this.pbNextWeathr6.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
+                    this.lblNextTemperatureMax6.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[6];
+                    this.lblNextTemperatureMin6.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[6];
+
+
+                    /*
+                    this.pbNextWeathr2.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
                     //this.pbNextWeathr2.Image = this.IconComposition(nextWeathrDatas[3], nextWeathrDatas[4], ICON_SIZE_SMALL);
-                    //this.pbNextWeathr3.Image = this.IconComposition(nextWeathrDatas[5], nextWeathrDatas[6], ICON_SIZE_SMALL);
+                    this.pbNextWeathr3.Image = this.IconComposition(nextWeathrDatas[5], nextWeathrDatas[6], ICON_SIZE_SMALL);
+                    this.pbNextWeathr4.Image = this.IconComposition(nextWeathrDatas[7], nextWeathrDatas[8], ICON_SIZE_SMALL);
+                    this.pbNextWeathr5.Image = this.IconComposition(nextWeathrDatas[9], nextWeathrDatas[10], ICON_SIZE_SMALL);
+                    this.pbNextWeathr6.Image = this.IconComposition(nextWeathrDatas[11], nextWeathrDatas[12], ICON_SIZE_SMALL);
                     this.lblNextTemperatureMax1.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[1] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit[1];
                     this.lblNextTemperatureMin1.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[1] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit[1];
                     this.lblNextTemperatureMax2.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[2] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit[2];
@@ -127,7 +181,7 @@ namespace Weather
                     this.lblNextDay4.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[4]).ToString(DAY_FORMAT);
                     this.lblNextDay5.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[5]).ToString(DAY_FORMAT);
                     this.lblNextDay6.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[6]).ToString(DAY_FORMAT);
-
+                    */
                 }
             }
             catch (Exception ex)

@@ -62,10 +62,31 @@
             lblNextTemperatureMax3 = new Label();
             lblNextWeathr3 = new Label();
             pbNextWeathr3 = new PictureBox();
+            lblNextTemperatureMinText4 = new Label();
+            lblNextTemperatureMaxText4 = new Label();
+            lblNextTemperatureMin4 = new Label();
+            lblNextTemperatureMax4 = new Label();
+            lblNextWeathr4 = new Label();
+            pbNextWeathr4 = new PictureBox();
+            lblNextTemperatureMinText5 = new Label();
+            lblNextTemperatureMaxText5 = new Label();
+            lblNextTemperatureMin5 = new Label();
+            lblNextTemperatureMax5 = new Label();
+            lblNextWeathr5 = new Label();
+            pbNextWeathr5 = new PictureBox();
+            lblNextTemperatureMinText6 = new Label();
+            lblNextTemperatureMaxText6 = new Label();
+            lblNextTemperatureMin6 = new Label();
+            lblNextTemperatureMax6 = new Label();
+            lblNextWeathr6 = new Label();
+            pbNextWeathr6 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pbShita).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbNextWeathr1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbNextWeathr2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbNextWeathr3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbNextWeathr4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbNextWeathr5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbNextWeathr6).BeginInit();
             SuspendLayout();
             // 
             // lblToday
@@ -168,7 +189,7 @@
             // lblNextDay4
             // 
             lblNextDay4.AutoSize = true;
-            lblNextDay4.Location = new Point(294, 317);
+            lblNextDay4.Location = new Point(478, 65);
             lblNextDay4.Name = "lblNextDay4";
             lblNextDay4.Size = new Size(43, 15);
             lblNextDay4.TabIndex = 11;
@@ -177,7 +198,7 @@
             // lblNextDay5
             // 
             lblNextDay5.AutoSize = true;
-            lblNextDay5.Location = new Point(294, 359);
+            lblNextDay5.Location = new Point(478, 148);
             lblNextDay5.Name = "lblNextDay5";
             lblNextDay5.Size = new Size(43, 15);
             lblNextDay5.TabIndex = 12;
@@ -186,7 +207,7 @@
             // lblNextDay6
             // 
             lblNextDay6.AutoSize = true;
-            lblNextDay6.Location = new Point(294, 404);
+            lblNextDay6.Location = new Point(478, 228);
             lblNextDay6.Name = "lblNextDay6";
             lblNextDay6.Size = new Size(43, 15);
             lblNextDay6.TabIndex = 13;
@@ -381,11 +402,191 @@
             pbNextWeathr3.TabIndex = 29;
             pbNextWeathr3.TabStop = false;
             // 
+            // lblNextTemperatureMinText4
+            // 
+            lblNextTemperatureMinText4.AutoSize = true;
+            lblNextTemperatureMinText4.Location = new Point(534, 47);
+            lblNextTemperatureMinText4.Name = "lblNextTemperatureMinText4";
+            lblNextTemperatureMinText4.Size = new Size(67, 15);
+            lblNextTemperatureMinText4.TabIndex = 40;
+            lblNextTemperatureMinText4.Text = "最低気温：";
+            // 
+            // lblNextTemperatureMaxText4
+            // 
+            lblNextTemperatureMaxText4.AutoSize = true;
+            lblNextTemperatureMaxText4.Location = new Point(534, 27);
+            lblNextTemperatureMaxText4.Name = "lblNextTemperatureMaxText4";
+            lblNextTemperatureMaxText4.Size = new Size(67, 15);
+            lblNextTemperatureMaxText4.TabIndex = 39;
+            lblNextTemperatureMaxText4.Text = "最高気温：";
+            // 
+            // lblNextTemperatureMin4
+            // 
+            lblNextTemperatureMin4.AutoSize = true;
+            lblNextTemperatureMin4.Location = new Point(598, 47);
+            lblNextTemperatureMin4.Name = "lblNextTemperatureMin4";
+            lblNextTemperatureMin4.Size = new Size(31, 15);
+            lblNextTemperatureMin4.TabIndex = 38;
+            lblNextTemperatureMin4.Text = "00℃";
+            // 
+            // lblNextTemperatureMax4
+            // 
+            lblNextTemperatureMax4.AutoSize = true;
+            lblNextTemperatureMax4.Location = new Point(598, 27);
+            lblNextTemperatureMax4.Name = "lblNextTemperatureMax4";
+            lblNextTemperatureMax4.Size = new Size(31, 15);
+            lblNextTemperatureMax4.TabIndex = 37;
+            lblNextTemperatureMax4.Text = "00℃";
+            // 
+            // lblNextWeathr4
+            // 
+            lblNextWeathr4.AutoSize = true;
+            lblNextWeathr4.Location = new Point(534, 9);
+            lblNextWeathr4.Name = "lblNextWeathr4";
+            lblNextWeathr4.Size = new Size(55, 15);
+            lblNextWeathr4.TabIndex = 36;
+            lblNextWeathr4.Text = "天気表示";
+            // 
+            // pbNextWeathr4
+            // 
+            pbNextWeathr4.InitialImage = null;
+            pbNextWeathr4.Location = new Point(478, 12);
+            pbNextWeathr4.Name = "pbNextWeathr4";
+            pbNextWeathr4.Size = new Size(50, 50);
+            pbNextWeathr4.TabIndex = 35;
+            pbNextWeathr4.TabStop = false;
+            // 
+            // lblNextTemperatureMinText5
+            // 
+            lblNextTemperatureMinText5.AutoSize = true;
+            lblNextTemperatureMinText5.Location = new Point(534, 130);
+            lblNextTemperatureMinText5.Name = "lblNextTemperatureMinText5";
+            lblNextTemperatureMinText5.Size = new Size(67, 15);
+            lblNextTemperatureMinText5.TabIndex = 46;
+            lblNextTemperatureMinText5.Text = "最低気温：";
+            // 
+            // lblNextTemperatureMaxText5
+            // 
+            lblNextTemperatureMaxText5.AutoSize = true;
+            lblNextTemperatureMaxText5.Location = new Point(534, 110);
+            lblNextTemperatureMaxText5.Name = "lblNextTemperatureMaxText5";
+            lblNextTemperatureMaxText5.Size = new Size(67, 15);
+            lblNextTemperatureMaxText5.TabIndex = 45;
+            lblNextTemperatureMaxText5.Text = "最高気温：";
+            // 
+            // lblNextTemperatureMin5
+            // 
+            lblNextTemperatureMin5.AutoSize = true;
+            lblNextTemperatureMin5.Location = new Point(598, 130);
+            lblNextTemperatureMin5.Name = "lblNextTemperatureMin5";
+            lblNextTemperatureMin5.Size = new Size(31, 15);
+            lblNextTemperatureMin5.TabIndex = 44;
+            lblNextTemperatureMin5.Text = "00℃";
+            // 
+            // lblNextTemperatureMax5
+            // 
+            lblNextTemperatureMax5.AutoSize = true;
+            lblNextTemperatureMax5.Location = new Point(598, 110);
+            lblNextTemperatureMax5.Name = "lblNextTemperatureMax5";
+            lblNextTemperatureMax5.Size = new Size(31, 15);
+            lblNextTemperatureMax5.TabIndex = 43;
+            lblNextTemperatureMax5.Text = "00℃";
+            // 
+            // lblNextWeathr5
+            // 
+            lblNextWeathr5.AutoSize = true;
+            lblNextWeathr5.Location = new Point(534, 92);
+            lblNextWeathr5.Name = "lblNextWeathr5";
+            lblNextWeathr5.Size = new Size(55, 15);
+            lblNextWeathr5.TabIndex = 42;
+            lblNextWeathr5.Text = "天気表示";
+            // 
+            // pbNextWeathr5
+            // 
+            pbNextWeathr5.InitialImage = null;
+            pbNextWeathr5.Location = new Point(478, 95);
+            pbNextWeathr5.Name = "pbNextWeathr5";
+            pbNextWeathr5.Size = new Size(50, 50);
+            pbNextWeathr5.TabIndex = 41;
+            pbNextWeathr5.TabStop = false;
+            // 
+            // lblNextTemperatureMinText6
+            // 
+            lblNextTemperatureMinText6.AutoSize = true;
+            lblNextTemperatureMinText6.Location = new Point(534, 211);
+            lblNextTemperatureMinText6.Name = "lblNextTemperatureMinText6";
+            lblNextTemperatureMinText6.Size = new Size(67, 15);
+            lblNextTemperatureMinText6.TabIndex = 52;
+            lblNextTemperatureMinText6.Text = "最低気温：";
+            // 
+            // lblNextTemperatureMaxText6
+            // 
+            lblNextTemperatureMaxText6.AutoSize = true;
+            lblNextTemperatureMaxText6.Location = new Point(534, 191);
+            lblNextTemperatureMaxText6.Name = "lblNextTemperatureMaxText6";
+            lblNextTemperatureMaxText6.Size = new Size(67, 15);
+            lblNextTemperatureMaxText6.TabIndex = 51;
+            lblNextTemperatureMaxText6.Text = "最高気温：";
+            // 
+            // lblNextTemperatureMin6
+            // 
+            lblNextTemperatureMin6.AutoSize = true;
+            lblNextTemperatureMin6.Location = new Point(598, 211);
+            lblNextTemperatureMin6.Name = "lblNextTemperatureMin6";
+            lblNextTemperatureMin6.Size = new Size(31, 15);
+            lblNextTemperatureMin6.TabIndex = 50;
+            lblNextTemperatureMin6.Text = "00℃";
+            // 
+            // lblNextTemperatureMax6
+            // 
+            lblNextTemperatureMax6.AutoSize = true;
+            lblNextTemperatureMax6.Location = new Point(598, 191);
+            lblNextTemperatureMax6.Name = "lblNextTemperatureMax6";
+            lblNextTemperatureMax6.Size = new Size(31, 15);
+            lblNextTemperatureMax6.TabIndex = 49;
+            lblNextTemperatureMax6.Text = "00℃";
+            // 
+            // lblNextWeathr6
+            // 
+            lblNextWeathr6.AutoSize = true;
+            lblNextWeathr6.Location = new Point(534, 173);
+            lblNextWeathr6.Name = "lblNextWeathr6";
+            lblNextWeathr6.Size = new Size(55, 15);
+            lblNextWeathr6.TabIndex = 48;
+            lblNextWeathr6.Text = "天気表示";
+            // 
+            // pbNextWeathr6
+            // 
+            pbNextWeathr6.InitialImage = null;
+            pbNextWeathr6.Location = new Point(478, 176);
+            pbNextWeathr6.Name = "pbNextWeathr6";
+            pbNextWeathr6.Size = new Size(50, 50);
+            pbNextWeathr6.TabIndex = 47;
+            pbNextWeathr6.TabStop = false;
+            // 
             // WeatherMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblNextTemperatureMinText6);
+            Controls.Add(lblNextTemperatureMaxText6);
+            Controls.Add(lblNextTemperatureMin6);
+            Controls.Add(lblNextTemperatureMax6);
+            Controls.Add(lblNextWeathr6);
+            Controls.Add(pbNextWeathr6);
+            Controls.Add(lblNextTemperatureMinText5);
+            Controls.Add(lblNextTemperatureMaxText5);
+            Controls.Add(lblNextTemperatureMin5);
+            Controls.Add(lblNextTemperatureMax5);
+            Controls.Add(lblNextWeathr5);
+            Controls.Add(pbNextWeathr5);
+            Controls.Add(lblNextTemperatureMinText4);
+            Controls.Add(lblNextTemperatureMaxText4);
+            Controls.Add(lblNextTemperatureMin4);
+            Controls.Add(lblNextTemperatureMax4);
+            Controls.Add(lblNextWeathr4);
+            Controls.Add(pbNextWeathr4);
             Controls.Add(lblNextTemperatureMinText3);
             Controls.Add(lblNextTemperatureMaxText3);
             Controls.Add(lblNextTemperatureMin3);
@@ -427,6 +628,9 @@
             ((System.ComponentModel.ISupportInitialize)pbNextWeathr1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbNextWeathr2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbNextWeathr3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbNextWeathr4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbNextWeathr5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbNextWeathr6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -467,5 +671,23 @@
         private Label lblNextTemperatureMax3;
         private Label lblNextWeathr3;
         private PictureBox pbNextWeathr3;
+        private Label lblNextTemperatureMinText4;
+        private Label lblNextTemperatureMaxText4;
+        private Label lblNextTemperatureMin4;
+        private Label lblNextTemperatureMax4;
+        private Label lblNextWeathr4;
+        private PictureBox pbNextWeathr4;
+        private Label lblNextTemperatureMinText5;
+        private Label lblNextTemperatureMaxText5;
+        private Label lblNextTemperatureMin5;
+        private Label lblNextTemperatureMax5;
+        private Label lblNextWeathr5;
+        private PictureBox pbNextWeathr5;
+        private Label lblNextTemperatureMinText6;
+        private Label lblNextTemperatureMaxText6;
+        private Label lblNextTemperatureMin6;
+        private Label lblNextTemperatureMax6;
+        private Label lblNextWeathr6;
+        private PictureBox pbNextWeathr6;
     }
 }
