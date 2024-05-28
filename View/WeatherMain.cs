@@ -114,8 +114,14 @@ namespace Weather
                     string[] nextWeathrDatas = currentWeathrData.Split(",");
                     this.lblNextWeathr1.Text = nextWeathrDatas[0];
                     this.pbNextWeathr1.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
+                    //this.pbNextWeathr2.Image = this.IconComposition(nextWeathrDatas[3], nextWeathrDatas[4], ICON_SIZE_SMALL);
+                    //this.pbNextWeathr3.Image = this.IconComposition(nextWeathrDatas[5], nextWeathrDatas[6], ICON_SIZE_SMALL);
                     this.lblNextTemperatureMax1.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[1] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit[1];
                     this.lblNextTemperatureMin1.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[1] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit[1];
+                    this.lblNextTemperatureMax2.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[2] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit[2];
+                    this.lblNextTemperatureMin2.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[2] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit[2];
+                    this.lblNextTemperatureMax3.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[3] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit[3];
+                    this.lblNextTemperatureMin3.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[3] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit[3];
                     this.lblNextDay2.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[2]).ToString(DAY_FORMAT);
                     this.lblNextDay3.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[3]).ToString(DAY_FORMAT);
                     this.lblNextDay4.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[4]).ToString(DAY_FORMAT);
