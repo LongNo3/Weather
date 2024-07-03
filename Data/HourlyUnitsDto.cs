@@ -19,12 +19,12 @@ namespace Weather.Data
         /// 2m以下の温度単位
         /// </summary>
         [JsonProperty("temperature_2m")]
-        public String Temperature2mUnit { get; set; } = string.Empty;
+        public String Temperature2mUnit { get; set; } = "℃";
 
         /// <summary>
         /// 最大降水確率単位
         /// </summary>
         [JsonProperty("precipitation_probability")]
-        public String PrecipitationQrobabilityUnit { get; set; } = string.Empty;
+        public String PrecipitationQrobabilityUnit { get; set; } = "％";
     }
 }

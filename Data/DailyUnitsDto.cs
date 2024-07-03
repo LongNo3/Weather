@@ -25,30 +25,30 @@ namespace Weather.Data
         /// 2m以下の最高温度単位
         /// </summary>
         [JsonProperty("temperature_2m_max")]
-        public String Temperature2mMaxUnit { get; set; } = string.Empty;
+        public String Temperature2mMaxUnit { get; set; } = "℃";
 
         /// <summary>
         /// 2m以下の最低温度単位
         /// </summary>
         [JsonProperty("temperature_2m_min")]
-        public String Temperature2mMinUnit { get; set; } = string.Empty;
+        public String Temperature2mMinUnit { get; set; } = "℃";
 
         /// <summary>
         /// 見かけの最高温度単位
         /// </summary>
         [JsonProperty("apparent_temperature_max")]
-        public String ApparentTemperatureMaxUnit { get; set; } = string.Empty;
+        public String ApparentTemperatureMaxUnit { get; set; } = "℃";
 
         /// <summary>
         /// 見かけの最高温度単位
         /// </summary>
         [JsonProperty("apparent_temperature_min")]
-        public String ApparentTemperatureMinUnit { get; set; } = string.Empty;
+        public String ApparentTemperatureMinUnit { get; set; } = "℃";
 
         /// <summary>
         /// 最大降水確率単位
         /// </summary>
         [JsonProperty("precipitation_probability_max")]
-        public String PrecipitationProbabilityMaxUnit { get; set; } = string.Empty;
+        public String PrecipitationProbabilityMaxUnit { get; set; } = "％";
     }
 }

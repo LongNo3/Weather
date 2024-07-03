@@ -29,6 +29,12 @@ namespace Weather
         /// <summary>日付フォーマット</summary>
         private static String DAY_FORMAT = "yyyy年MM月dd日(ddd)";
 
+        /// <summary>日付フォーマット</summary>
+        private static String DAY_FORMAT_SMALL = "MM月\r\ndd日\r\n(ddd)";
+
+        /// <summary>温度記号</summary>
+        private static String TEMPERATURE_SYMBOL = "℃";
+
         /// <summary>アイコンフォルダパス</summary>
         private static String ICON_PATH = "../../../Picture/";
 
@@ -61,15 +67,20 @@ namespace Weather
         }
 
         /// <summary>
-        /// 天気サイトからJSON情報を取得する（仮）
+        /// 天気サイトからJSON情報を取得し表示する（仮）
         /// </summary>
         /// <returns></returns>
         private async Task JsonAsync()
         {
-        // URLエンコーディング
-        // https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,weather_code&hourly=temperature_2m&daily=weather_code,apparent_temperature_max,apparent_temperature_min&timezone=Asia%2FTokyo
-        // https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,precipitation,weather_code&hourly=temperature_2m,precipitation_probability&daily=weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_probability_max&timezone=Asia%2FTokyo
-            string url = "https://api.open-meteo.com/v1/forecast?latitude=35.00&longitude=135.00&current=temperature_2m,precipitation,weather_code&hourly=temperature_2m,precipitation_probability&daily=weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_probability_max&timezone=Asia%2FTokyo";
+            // 緯度, 経度
+            // 東京：国立(GoogleMap)：35.703943385198265, 139.44832349242623
+            // 東京：国立(緯度経度地図 https://fukuno.jig.jp/app/map/latlng/)：35.703127,139.448513
+            // https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,weather_code&hourly=temperature_2m&daily=weather_code,apparent_temperature_max,apparent_temperature_min&timezone=Asia%2FTokyo
+            // 大阪：福島：https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,precipitation,weather_code&hourly=temperature_2m,precipitation_probability&daily=weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_probability_max&timezone=Asia%2FTokyo
+            // 東京：国立：https://api.open-meteo.com/v1/forecast?latitude=35.703127&longitude=139.448513&current=temperature_2m,precipitation,weather_code&hourly=temperature_2m,precipitation_probability&daily=weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_probability_max&timezone=Asia%2FTokyo
+
+            // URLエンコーディング
+            string url = "https://api.open-meteo.com/v1/forecast?latitude=35.703127&longitude=139.448513&current=temperature_2m,precipitation,weather_code&hourly=temperature_2m,precipitation_probability&daily=weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_probability_max&timezone=Asia%2FTokyo";
 
             try
             {
@@ -103,64 +114,64 @@ namespace Weather
                     // 今の温度を表示
                     this.lblCurrentTemperature.Text = rawWeatherDataDto.CurrentDto.Temperature2m + rawWeatherDataDto.CurrentUnitsDto.Temperature2mUnit;
                     // 今日の最高気温を表示
-                    this.lblCurrentTemperatureMax.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[0] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit[0];
+                    this.lblCurrentTemperatureMax.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[0] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit;
                     // 今日の最低気温を表示
-                    this.lblCurrentTemperatureMin.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[0] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit[0];
+                    this.lblCurrentTemperatureMin.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[0] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit;
 
                     // 週間天気1
                     string nextWeathrData = string.Empty;
-                    this.lblNextDay1.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[1]).ToString(DAY_FORMAT);
+                    this.lblNextDay1.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[1]).ToString(DAY_FORMAT_SMALL);
                     nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[1]);
                     string[] nextWeathrDatas = nextWeathrData.Split(",");
                     this.lblNextWeathr1.Text = nextWeathrDatas[0];
                     this.pbNextWeathr1.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
-                    this.lblNextTemperatureMax1.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[1];
-                    this.lblNextTemperatureMin1.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[1];
+                    this.lblNextTemperatureMax1.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[1] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit;
+                    this.lblNextTemperatureMin1.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[1] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit;
 
                     // 週間天気2
-                    this.lblNextDay2.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[2]).ToString(DAY_FORMAT);
+                    this.lblNextDay2.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[2]).ToString(DAY_FORMAT_SMALL);
                     nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[2]);
                     nextWeathrDatas = nextWeathrData.Split(",");
                     this.lblNextWeathr2.Text = nextWeathrDatas[0];
                     this.pbNextWeathr2.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
-                    this.lblNextTemperatureMax2.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[2];
-                    this.lblNextTemperatureMin2.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[2];
+                    this.lblNextTemperatureMax2.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[2] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit;
+                    this.lblNextTemperatureMin2.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[2] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit;
 
                     // 週間天気3
-                    this.lblNextDay3.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[3]).ToString(DAY_FORMAT);
+                    this.lblNextDay3.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[3]).ToString(DAY_FORMAT_SMALL);
                     nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[3]);
                     nextWeathrDatas = nextWeathrData.Split(",");
                     this.lblNextWeathr3.Text = nextWeathrDatas[0];
                     this.pbNextWeathr3.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
-                    this.lblNextTemperatureMax3.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[3];
-                    this.lblNextTemperatureMin3.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[3];
+                    this.lblNextTemperatureMax3.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[3] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit;
+                    this.lblNextTemperatureMin3.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[3] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit;
 
                     // 週間天気4
-                    this.lblNextDay4.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[4]).ToString(DAY_FORMAT);
+                    this.lblNextDay4.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[4]).ToString(DAY_FORMAT_SMALL);
                     nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[4]);
                     nextWeathrDatas = nextWeathrData.Split(",");
                     this.lblNextWeathr4.Text = nextWeathrDatas[0];
                     this.pbNextWeathr4.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
-                    this.lblNextTemperatureMax4.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[4];
-                    this.lblNextTemperatureMin4.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[4];
+                    this.lblNextTemperatureMax4.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[4] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit; ;
+                    this.lblNextTemperatureMin4.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[4] +rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit;
 
                     // 週間天気5
-                    this.lblNextDay5.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[5]).ToString(DAY_FORMAT);
+                    this.lblNextDay5.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[5]).ToString(DAY_FORMAT_SMALL);
                     nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[5]);
                     nextWeathrDatas = nextWeathrData.Split(",");
                     this.lblNextWeathr5.Text = nextWeathrDatas[0];
                     this.pbNextWeathr5.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
-                    this.lblNextTemperatureMax5.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[5];
-                    this.lblNextTemperatureMin5.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[5];
+                    this.lblNextTemperatureMax5.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[5] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit; ;
+                    this.lblNextTemperatureMin5.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[5] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit;
 
                     // 週間天気6
-                    this.lblNextDay6.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[6]).ToString(DAY_FORMAT);
+                    this.lblNextDay6.Text = DateTime.Parse(rawWeatherDataDto.DailyDto.Date[6]).ToString(DAY_FORMAT_SMALL);
                     nextWeathrData = dba.GetValue(rawWeatherDataDto.DailyDto.WeatherCode[6]);
                     nextWeathrDatas = nextWeathrData.Split(",");
                     this.lblNextWeathr6.Text = nextWeathrDatas[0];
                     this.pbNextWeathr6.Image = this.IconComposition(nextWeathrDatas[1], nextWeathrDatas[2], ICON_SIZE_SMALL);
-                    this.lblNextTemperatureMax6.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[6];
-                    this.lblNextTemperatureMin6.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[6];
+                    this.lblNextTemperatureMax6.Text = rawWeatherDataDto.DailyDto.Temperature2mMax[6] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMaxUnit;
+                    this.lblNextTemperatureMin6.Text = rawWeatherDataDto.DailyDto.Temperature2mMin[6] + rawWeatherDataDto.DailyUnitsDto.Temperature2mMinUnit;
 
 
                     /*

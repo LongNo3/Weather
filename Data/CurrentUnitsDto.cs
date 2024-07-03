@@ -25,13 +25,13 @@ namespace Weather.Data
         /// 2m以下の温度単位
         /// </summary>
         [JsonProperty("temperature_2m")]
-        public String Temperature2mUnit { get; set; } = string.Empty;
+        public String Temperature2mUnit { get; set; } = "℃";
 
         /// <summary>
         /// 降水確率単位
         /// </summary>
         [JsonProperty("precipitation")]
-        public String PrecipitationQrobabilityUnit { get; set; } = string.Empty;
+        public String PrecipitationQrobabilityUnit { get; set; } = "%";
 
         /// <summary>
         /// 天気コードWmo
