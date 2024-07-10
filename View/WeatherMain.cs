@@ -45,6 +45,10 @@ namespace Weather
         /// <summary>アイコンフォルダパス</summary>
         private static Size ICON_SIZE_SMALL = new Size(50, 50);
 
+        Boolean TimeLoopFlag = true;
+
+        Task TimeTask;
+
         delegate void LblTimeViewDelegate();
 
         /// <summary>
@@ -69,16 +73,9 @@ namespace Weather
             lblToday.Text = today.ToString(DAY_FORMAT);
 
             // 時間表示
-            await Task.Run(() =>
-            {
-                while (true)
-                {
-                    this.ViewTime();
-                    // 1000ミリ秒=1秒
-                    Task.Delay(1000);
-                }
-            });
-            //await this.ViewTime();
+            TimeTask = new Task(() => ViewTime());
+            TimeTask.Start();
+
             lblToday.Text = today.ToString(DAY_FORMAT);
             // 天気表示
             //await Task.Run(() => this.JsonAsync());
@@ -92,7 +89,8 @@ namespace Weather
         /// <param name="e"></param>
         private void WeatherMain_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
+            TimeLoopFlag = false;
+            TimeTask.Dispose();
         }
 
         /// <summary>
@@ -256,10 +254,21 @@ namespace Weather
 
         private void ViewTime()
         {
-            //while (true)
+            try
             {
-                // 時間更新
-                Invoke(new LblTimeViewDelegate(SetTime));
+                while (TimeLoopFlag)
+                {
+                    // 時間更新
+                    Invoke(new LblTimeViewDelegate(SetTime));
+                }
+            }
+            catch(ObjectDisposedException ode)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                throw;
             }
         }
 
