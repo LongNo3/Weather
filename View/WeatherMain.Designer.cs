@@ -80,6 +80,8 @@
             lblNextTemperatureMax6 = new Label();
             lblNextWeathr6 = new Label();
             pbNextWeathr6 = new PictureBox();
+            LblTownName = new Label();
+            LblTime = new Label();
             ((System.ComponentModel.ISupportInitialize)pbShita).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbNextWeathr1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbNextWeathr2).BeginInit();
@@ -162,7 +164,7 @@
             // lblNextDay1
             // 
             lblNextDay1.AutoSize = true;
-            lblNextDay1.Location = new Point(296, 12);
+            lblNextDay1.Location = new Point(297, 43);
             lblNextDay1.Name = "lblNextDay1";
             lblNextDay1.Size = new Size(43, 15);
             lblNextDay1.TabIndex = 8;
@@ -171,7 +173,7 @@
             // lblNextDay2
             // 
             lblNextDay2.AutoSize = true;
-            lblNextDay2.Location = new Point(296, 68);
+            lblNextDay2.Location = new Point(297, 99);
             lblNextDay2.Name = "lblNextDay2";
             lblNextDay2.Size = new Size(43, 15);
             lblNextDay2.TabIndex = 9;
@@ -180,7 +182,7 @@
             // lblNextDay3
             // 
             lblNextDay3.AutoSize = true;
-            lblNextDay3.Location = new Point(296, 124);
+            lblNextDay3.Location = new Point(297, 155);
             lblNextDay3.Name = "lblNextDay3";
             lblNextDay3.Size = new Size(43, 15);
             lblNextDay3.TabIndex = 10;
@@ -189,7 +191,7 @@
             // lblNextDay4
             // 
             lblNextDay4.AutoSize = true;
-            lblNextDay4.Location = new Point(296, 180);
+            lblNextDay4.Location = new Point(297, 211);
             lblNextDay4.Name = "lblNextDay4";
             lblNextDay4.Size = new Size(43, 15);
             lblNextDay4.TabIndex = 11;
@@ -198,7 +200,7 @@
             // lblNextDay5
             // 
             lblNextDay5.AutoSize = true;
-            lblNextDay5.Location = new Point(296, 236);
+            lblNextDay5.Location = new Point(297, 267);
             lblNextDay5.Name = "lblNextDay5";
             lblNextDay5.Size = new Size(43, 15);
             lblNextDay5.TabIndex = 12;
@@ -207,7 +209,7 @@
             // lblNextDay6
             // 
             lblNextDay6.AutoSize = true;
-            lblNextDay6.Location = new Point(296, 292);
+            lblNextDay6.Location = new Point(297, 323);
             lblNextDay6.Name = "lblNextDay6";
             lblNextDay6.Size = new Size(43, 15);
             lblNextDay6.TabIndex = 13;
@@ -216,7 +218,7 @@
             // pbNextWeathr1
             // 
             pbNextWeathr1.InitialImage = null;
-            pbNextWeathr1.Location = new Point(328, 12);
+            pbNextWeathr1.Location = new Point(329, 43);
             pbNextWeathr1.Name = "pbNextWeathr1";
             pbNextWeathr1.Size = new Size(50, 50);
             pbNextWeathr1.TabIndex = 14;
@@ -225,7 +227,7 @@
             // lblNextWeathr1
             // 
             lblNextWeathr1.AutoSize = true;
-            lblNextWeathr1.Location = new Point(384, 12);
+            lblNextWeathr1.Location = new Point(385, 43);
             lblNextWeathr1.Name = "lblNextWeathr1";
             lblNextWeathr1.Size = new Size(55, 15);
             lblNextWeathr1.TabIndex = 15;
@@ -234,7 +236,7 @@
             // lblNextTemperatureMax1
             // 
             lblNextTemperatureMax1.AutoSize = true;
-            lblNextTemperatureMax1.Location = new Point(448, 27);
+            lblNextTemperatureMax1.Location = new Point(449, 58);
             lblNextTemperatureMax1.Name = "lblNextTemperatureMax1";
             lblNextTemperatureMax1.Size = new Size(31, 15);
             lblNextTemperatureMax1.TabIndex = 16;
@@ -273,7 +275,7 @@
             // lblNextTemperatureMin1
             // 
             lblNextTemperatureMin1.AutoSize = true;
-            lblNextTemperatureMin1.Location = new Point(448, 42);
+            lblNextTemperatureMin1.Location = new Point(449, 73);
             lblNextTemperatureMin1.Name = "lblNextTemperatureMin1";
             lblNextTemperatureMin1.Size = new Size(31, 15);
             lblNextTemperatureMin1.TabIndex = 20;
@@ -282,7 +284,7 @@
             // lblNextTemperatureMaxText1
             // 
             lblNextTemperatureMaxText1.AutoSize = true;
-            lblNextTemperatureMaxText1.Location = new Point(384, 27);
+            lblNextTemperatureMaxText1.Location = new Point(385, 58);
             lblNextTemperatureMaxText1.Name = "lblNextTemperatureMaxText1";
             lblNextTemperatureMaxText1.Size = new Size(67, 15);
             lblNextTemperatureMaxText1.TabIndex = 21;
@@ -291,7 +293,7 @@
             // lblNextTemperatureMinText1
             // 
             lblNextTemperatureMinText1.AutoSize = true;
-            lblNextTemperatureMinText1.Location = new Point(384, 42);
+            lblNextTemperatureMinText1.Location = new Point(385, 73);
             lblNextTemperatureMinText1.Name = "lblNextTemperatureMinText1";
             lblNextTemperatureMinText1.Size = new Size(67, 15);
             lblNextTemperatureMinText1.TabIndex = 22;
@@ -300,7 +302,7 @@
             // lblNextTemperatureMinText2
             // 
             lblNextTemperatureMinText2.AutoSize = true;
-            lblNextTemperatureMinText2.Location = new Point(384, 98);
+            lblNextTemperatureMinText2.Location = new Point(385, 129);
             lblNextTemperatureMinText2.Name = "lblNextTemperatureMinText2";
             lblNextTemperatureMinText2.Size = new Size(67, 15);
             lblNextTemperatureMinText2.TabIndex = 28;
@@ -309,7 +311,7 @@
             // lblNextTemperatureMaxText2
             // 
             lblNextTemperatureMaxText2.AutoSize = true;
-            lblNextTemperatureMaxText2.Location = new Point(384, 83);
+            lblNextTemperatureMaxText2.Location = new Point(385, 114);
             lblNextTemperatureMaxText2.Name = "lblNextTemperatureMaxText2";
             lblNextTemperatureMaxText2.Size = new Size(67, 15);
             lblNextTemperatureMaxText2.TabIndex = 27;
@@ -318,7 +320,7 @@
             // lblNextTemperatureMin2
             // 
             lblNextTemperatureMin2.AutoSize = true;
-            lblNextTemperatureMin2.Location = new Point(448, 98);
+            lblNextTemperatureMin2.Location = new Point(449, 129);
             lblNextTemperatureMin2.Name = "lblNextTemperatureMin2";
             lblNextTemperatureMin2.Size = new Size(31, 15);
             lblNextTemperatureMin2.TabIndex = 26;
@@ -327,7 +329,7 @@
             // lblNextTemperatureMax2
             // 
             lblNextTemperatureMax2.AutoSize = true;
-            lblNextTemperatureMax2.Location = new Point(448, 83);
+            lblNextTemperatureMax2.Location = new Point(449, 114);
             lblNextTemperatureMax2.Name = "lblNextTemperatureMax2";
             lblNextTemperatureMax2.Size = new Size(31, 15);
             lblNextTemperatureMax2.TabIndex = 25;
@@ -336,7 +338,7 @@
             // lblNextWeathr2
             // 
             lblNextWeathr2.AutoSize = true;
-            lblNextWeathr2.Location = new Point(384, 68);
+            lblNextWeathr2.Location = new Point(385, 99);
             lblNextWeathr2.Name = "lblNextWeathr2";
             lblNextWeathr2.Size = new Size(55, 15);
             lblNextWeathr2.TabIndex = 24;
@@ -345,7 +347,7 @@
             // pbNextWeathr2
             // 
             pbNextWeathr2.InitialImage = null;
-            pbNextWeathr2.Location = new Point(328, 68);
+            pbNextWeathr2.Location = new Point(329, 99);
             pbNextWeathr2.Name = "pbNextWeathr2";
             pbNextWeathr2.Size = new Size(50, 50);
             pbNextWeathr2.TabIndex = 23;
@@ -354,7 +356,7 @@
             // lblNextTemperatureMinText3
             // 
             lblNextTemperatureMinText3.AutoSize = true;
-            lblNextTemperatureMinText3.Location = new Point(384, 154);
+            lblNextTemperatureMinText3.Location = new Point(385, 185);
             lblNextTemperatureMinText3.Name = "lblNextTemperatureMinText3";
             lblNextTemperatureMinText3.Size = new Size(67, 15);
             lblNextTemperatureMinText3.TabIndex = 34;
@@ -363,7 +365,7 @@
             // lblNextTemperatureMaxText3
             // 
             lblNextTemperatureMaxText3.AutoSize = true;
-            lblNextTemperatureMaxText3.Location = new Point(384, 139);
+            lblNextTemperatureMaxText3.Location = new Point(385, 170);
             lblNextTemperatureMaxText3.Name = "lblNextTemperatureMaxText3";
             lblNextTemperatureMaxText3.Size = new Size(67, 15);
             lblNextTemperatureMaxText3.TabIndex = 33;
@@ -372,7 +374,7 @@
             // lblNextTemperatureMin3
             // 
             lblNextTemperatureMin3.AutoSize = true;
-            lblNextTemperatureMin3.Location = new Point(448, 154);
+            lblNextTemperatureMin3.Location = new Point(449, 185);
             lblNextTemperatureMin3.Name = "lblNextTemperatureMin3";
             lblNextTemperatureMin3.Size = new Size(31, 15);
             lblNextTemperatureMin3.TabIndex = 32;
@@ -381,7 +383,7 @@
             // lblNextTemperatureMax3
             // 
             lblNextTemperatureMax3.AutoSize = true;
-            lblNextTemperatureMax3.Location = new Point(448, 139);
+            lblNextTemperatureMax3.Location = new Point(449, 170);
             lblNextTemperatureMax3.Name = "lblNextTemperatureMax3";
             lblNextTemperatureMax3.Size = new Size(31, 15);
             lblNextTemperatureMax3.TabIndex = 31;
@@ -390,7 +392,7 @@
             // lblNextWeathr3
             // 
             lblNextWeathr3.AutoSize = true;
-            lblNextWeathr3.Location = new Point(384, 124);
+            lblNextWeathr3.Location = new Point(385, 155);
             lblNextWeathr3.Name = "lblNextWeathr3";
             lblNextWeathr3.Size = new Size(55, 15);
             lblNextWeathr3.TabIndex = 30;
@@ -399,7 +401,7 @@
             // pbNextWeathr3
             // 
             pbNextWeathr3.InitialImage = null;
-            pbNextWeathr3.Location = new Point(328, 124);
+            pbNextWeathr3.Location = new Point(329, 155);
             pbNextWeathr3.Name = "pbNextWeathr3";
             pbNextWeathr3.Size = new Size(50, 50);
             pbNextWeathr3.TabIndex = 29;
@@ -408,7 +410,7 @@
             // lblNextTemperatureMinText4
             // 
             lblNextTemperatureMinText4.AutoSize = true;
-            lblNextTemperatureMinText4.Location = new Point(384, 210);
+            lblNextTemperatureMinText4.Location = new Point(385, 241);
             lblNextTemperatureMinText4.Name = "lblNextTemperatureMinText4";
             lblNextTemperatureMinText4.Size = new Size(67, 15);
             lblNextTemperatureMinText4.TabIndex = 40;
@@ -417,7 +419,7 @@
             // lblNextTemperatureMaxText4
             // 
             lblNextTemperatureMaxText4.AutoSize = true;
-            lblNextTemperatureMaxText4.Location = new Point(384, 195);
+            lblNextTemperatureMaxText4.Location = new Point(385, 226);
             lblNextTemperatureMaxText4.Name = "lblNextTemperatureMaxText4";
             lblNextTemperatureMaxText4.Size = new Size(67, 15);
             lblNextTemperatureMaxText4.TabIndex = 39;
@@ -426,7 +428,7 @@
             // lblNextTemperatureMin4
             // 
             lblNextTemperatureMin4.AutoSize = true;
-            lblNextTemperatureMin4.Location = new Point(448, 210);
+            lblNextTemperatureMin4.Location = new Point(449, 241);
             lblNextTemperatureMin4.Name = "lblNextTemperatureMin4";
             lblNextTemperatureMin4.Size = new Size(31, 15);
             lblNextTemperatureMin4.TabIndex = 38;
@@ -435,7 +437,7 @@
             // lblNextTemperatureMax4
             // 
             lblNextTemperatureMax4.AutoSize = true;
-            lblNextTemperatureMax4.Location = new Point(448, 195);
+            lblNextTemperatureMax4.Location = new Point(449, 226);
             lblNextTemperatureMax4.Name = "lblNextTemperatureMax4";
             lblNextTemperatureMax4.Size = new Size(31, 15);
             lblNextTemperatureMax4.TabIndex = 37;
@@ -444,7 +446,7 @@
             // lblNextWeathr4
             // 
             lblNextWeathr4.AutoSize = true;
-            lblNextWeathr4.Location = new Point(384, 180);
+            lblNextWeathr4.Location = new Point(385, 211);
             lblNextWeathr4.Name = "lblNextWeathr4";
             lblNextWeathr4.Size = new Size(55, 15);
             lblNextWeathr4.TabIndex = 36;
@@ -453,7 +455,7 @@
             // pbNextWeathr4
             // 
             pbNextWeathr4.InitialImage = null;
-            pbNextWeathr4.Location = new Point(328, 180);
+            pbNextWeathr4.Location = new Point(329, 211);
             pbNextWeathr4.Name = "pbNextWeathr4";
             pbNextWeathr4.Size = new Size(50, 50);
             pbNextWeathr4.TabIndex = 35;
@@ -462,7 +464,7 @@
             // lblNextTemperatureMinText5
             // 
             lblNextTemperatureMinText5.AutoSize = true;
-            lblNextTemperatureMinText5.Location = new Point(384, 266);
+            lblNextTemperatureMinText5.Location = new Point(385, 297);
             lblNextTemperatureMinText5.Name = "lblNextTemperatureMinText5";
             lblNextTemperatureMinText5.Size = new Size(67, 15);
             lblNextTemperatureMinText5.TabIndex = 46;
@@ -471,7 +473,7 @@
             // lblNextTemperatureMaxText5
             // 
             lblNextTemperatureMaxText5.AutoSize = true;
-            lblNextTemperatureMaxText5.Location = new Point(384, 251);
+            lblNextTemperatureMaxText5.Location = new Point(385, 282);
             lblNextTemperatureMaxText5.Name = "lblNextTemperatureMaxText5";
             lblNextTemperatureMaxText5.Size = new Size(67, 15);
             lblNextTemperatureMaxText5.TabIndex = 45;
@@ -480,7 +482,7 @@
             // lblNextTemperatureMin5
             // 
             lblNextTemperatureMin5.AutoSize = true;
-            lblNextTemperatureMin5.Location = new Point(448, 266);
+            lblNextTemperatureMin5.Location = new Point(449, 297);
             lblNextTemperatureMin5.Name = "lblNextTemperatureMin5";
             lblNextTemperatureMin5.Size = new Size(31, 15);
             lblNextTemperatureMin5.TabIndex = 44;
@@ -489,7 +491,7 @@
             // lblNextTemperatureMax5
             // 
             lblNextTemperatureMax5.AutoSize = true;
-            lblNextTemperatureMax5.Location = new Point(448, 251);
+            lblNextTemperatureMax5.Location = new Point(449, 282);
             lblNextTemperatureMax5.Name = "lblNextTemperatureMax5";
             lblNextTemperatureMax5.Size = new Size(31, 15);
             lblNextTemperatureMax5.TabIndex = 43;
@@ -498,7 +500,7 @@
             // lblNextWeathr5
             // 
             lblNextWeathr5.AutoSize = true;
-            lblNextWeathr5.Location = new Point(384, 237);
+            lblNextWeathr5.Location = new Point(385, 268);
             lblNextWeathr5.Name = "lblNextWeathr5";
             lblNextWeathr5.Size = new Size(55, 15);
             lblNextWeathr5.TabIndex = 42;
@@ -507,7 +509,7 @@
             // pbNextWeathr5
             // 
             pbNextWeathr5.InitialImage = null;
-            pbNextWeathr5.Location = new Point(328, 236);
+            pbNextWeathr5.Location = new Point(329, 267);
             pbNextWeathr5.Name = "pbNextWeathr5";
             pbNextWeathr5.Size = new Size(50, 50);
             pbNextWeathr5.TabIndex = 41;
@@ -516,7 +518,7 @@
             // lblNextTemperatureMinText6
             // 
             lblNextTemperatureMinText6.AutoSize = true;
-            lblNextTemperatureMinText6.Location = new Point(384, 322);
+            lblNextTemperatureMinText6.Location = new Point(385, 353);
             lblNextTemperatureMinText6.Name = "lblNextTemperatureMinText6";
             lblNextTemperatureMinText6.Size = new Size(67, 15);
             lblNextTemperatureMinText6.TabIndex = 52;
@@ -525,7 +527,7 @@
             // lblNextTemperatureMaxText6
             // 
             lblNextTemperatureMaxText6.AutoSize = true;
-            lblNextTemperatureMaxText6.Location = new Point(384, 307);
+            lblNextTemperatureMaxText6.Location = new Point(385, 338);
             lblNextTemperatureMaxText6.Name = "lblNextTemperatureMaxText6";
             lblNextTemperatureMaxText6.Size = new Size(67, 15);
             lblNextTemperatureMaxText6.TabIndex = 51;
@@ -534,7 +536,7 @@
             // lblNextTemperatureMin6
             // 
             lblNextTemperatureMin6.AutoSize = true;
-            lblNextTemperatureMin6.Location = new Point(448, 322);
+            lblNextTemperatureMin6.Location = new Point(449, 353);
             lblNextTemperatureMin6.Name = "lblNextTemperatureMin6";
             lblNextTemperatureMin6.Size = new Size(31, 15);
             lblNextTemperatureMin6.TabIndex = 50;
@@ -543,7 +545,7 @@
             // lblNextTemperatureMax6
             // 
             lblNextTemperatureMax6.AutoSize = true;
-            lblNextTemperatureMax6.Location = new Point(448, 307);
+            lblNextTemperatureMax6.Location = new Point(449, 338);
             lblNextTemperatureMax6.Name = "lblNextTemperatureMax6";
             lblNextTemperatureMax6.Size = new Size(31, 15);
             lblNextTemperatureMax6.TabIndex = 49;
@@ -552,7 +554,7 @@
             // lblNextWeathr6
             // 
             lblNextWeathr6.AutoSize = true;
-            lblNextWeathr6.Location = new Point(384, 292);
+            lblNextWeathr6.Location = new Point(385, 323);
             lblNextWeathr6.Name = "lblNextWeathr6";
             lblNextWeathr6.Size = new Size(55, 15);
             lblNextWeathr6.TabIndex = 48;
@@ -561,17 +563,38 @@
             // pbNextWeathr6
             // 
             pbNextWeathr6.InitialImage = null;
-            pbNextWeathr6.Location = new Point(328, 292);
+            pbNextWeathr6.Location = new Point(329, 323);
             pbNextWeathr6.Name = "pbNextWeathr6";
             pbNextWeathr6.Size = new Size(50, 50);
             pbNextWeathr6.TabIndex = 47;
             pbNextWeathr6.TabStop = false;
+            // 
+            // LblTownName
+            // 
+            LblTownName.AutoSize = true;
+            LblTownName.Location = new Point(9, 397);
+            LblTownName.Name = "LblTownName";
+            LblTownName.Size = new Size(151, 15);
+            LblTownName.TabIndex = 53;
+            LblTownName.Text = "東京都国分寺光町（固定）";
+            // 
+            // LblTime
+            // 
+            LblTime.AutoSize = true;
+            LblTime.Font = new Font("Yu Gothic UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 128);
+            LblTime.Location = new Point(269, -1);
+            LblTime.Name = "LblTime";
+            LblTime.Size = new Size(178, 45);
+            LblTime.TabIndex = 54;
+            LblTime.Text = "HH:mm:sss";
             // 
             // WeatherMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(LblTime);
+            Controls.Add(LblTownName);
             Controls.Add(lblNextTemperatureMinText6);
             Controls.Add(lblNextTemperatureMaxText6);
             Controls.Add(lblNextTemperatureMin6);
@@ -692,5 +715,7 @@
         private Label lblNextTemperatureMax6;
         private Label lblNextWeathr6;
         private PictureBox pbNextWeathr6;
+        private Label LblTownName;
+        private Label LblTime;
     }
 }

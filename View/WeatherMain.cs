@@ -17,6 +17,7 @@ using Newtonsoft.Json;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Reflection.Emit;
+using System.Threading;
 
 namespace Weather
 {
@@ -44,6 +45,8 @@ namespace Weather
         /// <summary>アイコンフォルダパス</summary>
         private static Size ICON_SIZE_SMALL = new Size(50, 50);
 
+        delegate void LblTimeViewDelegate();
+
         /// <summary>
         /// コンストラクタ
         /// </summary>
@@ -61,9 +64,35 @@ namespace Weather
         /// <param name="e"></param>
         private async void WeatherMainLoad(object sender, EventArgs e)
         {
+            // 今日の日付
             DateTime today = DateTime.Today;
             lblToday.Text = today.ToString(DAY_FORMAT);
+
+            // 時間表示
+            await Task.Run(() =>
+            {
+                while (true)
+                {
+                    this.ViewTime();
+                    // 1000ミリ秒=1秒
+                    Task.Delay(1000);
+                }
+            });
+            //await this.ViewTime();
+            lblToday.Text = today.ToString(DAY_FORMAT);
+            // 天気表示
+            //await Task.Run(() => this.JsonAsync());
             await this.JsonAsync();
+        }
+
+        /// <summary>
+        /// アプリを閉じるときの処理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void WeatherMain_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
 
         /// <summary>
@@ -223,6 +252,20 @@ namespace Weather
             img2.Dispose();
 
             return new Bitmap(img1, iconSize);
+        }
+
+        private void ViewTime()
+        {
+            //while (true)
+            {
+                // 時間更新
+                Invoke(new LblTimeViewDelegate(SetTime));
+            }
+        }
+
+        private void SetTime()
+        {
+            LblTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }
